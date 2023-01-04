@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "SadSoup" --password-stdin
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "sadsoup" --password-stdin
         docker image build -t sadsoup/flask:latest .
         docker push sadsoup/flask:latest
