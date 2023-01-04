@@ -38,10 +38,10 @@ jobs:
       run: |
          python demo3.py
 
-#     -name: Build and Push Docker Image
-#       uses: mr-smithers-excellent/docker-build-push@v4
-#       with:
-#         image: sadsoup/demo3
-#         registry: docker.io
-#         username: ${{ secrets.DOCKER_USERNAME }}
-#         password: ${{ secrets.DOCKER_PASSWORD }}
+    -name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: sadsoup/demo3
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
